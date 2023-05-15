@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Check Soccer</title>
+  <style>
+    @font-face {
+      font-family: 'Basni';
+      src: url('path/to/basni.std.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Basni", serif;
+      text-align: center;
+      color: rgb(63, 61, 66);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: normal;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(66, 62, 62, 0.76);
+    }
+
+    .video-container {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      border: 10px solid #474545; /* Adicione essa linha para adicionar uma borda branca de 10px ao redor do contêiner de vídeo */
+      box-shadow: 0 0 50px rgba(17, 16, 16, 0.5); /* Adicione essa linha para adicionar uma sombra ao redor do contêiner de vídeo */
+    }
+
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .language-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .language-buttons button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .language-buttons img {
+      width: 30px;
+      height: 20px;
+    }
+
+    .background-image {
+      background-image: url("https://img.freepik.com/fotos-gratis/variedade-de-diferentes-elementos-de-viagem_23-2148884929.jpg?w=740&t=st=1684177605~exp=1684178205~hmac=994fbd5a4469a00cafb60f4cf1a52eaa01329290b5418e2e1b99d8f6d6f80008");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      var video = document.getElementById('myVideo');
+      var lang = localStorage.getItem('language');
+
+      if (lang === 'english') {
+        video.style.display = 'none';
+        window.location.href = 'http://checksoccer.se/EN/';
+      } else if (lang === 'portuguese') {
+        video.style.display = 'none';
+        window.location.href = 'http://checksoccer.com.br';
+      }
+    }
+
+    function changeLanguage(lang) {
+      localStorage.setItem('language', lang);
+
+      if (lang === 'english') {
+        window.location.href = 'http://checksoccer.se/EN/';
+      } else if (lang === 'portuguese') {
+        window.location.href = 'http://checksoccer.com.br';
+      }
+    }
+  </script>
+</head>
+
+<body class="background-image">
+  <div class="video-container">
+    <video id="myVideo" autoplay>
+      <source src="https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/9bd2d8f096f9f58b10144df01db69b58.webm" type="video/webm">
+    </video>
+  </div>
+
+  <h2>(Welcome to Check Soccer!)   (Bem vindo a Check Soccer!)</h1>
+  <h3>(Choose the language)  (Escolha o idioma)</h3>
+
+  <div class="language-buttons">
+    <button onclick="changeLanguage('english')">
+      <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English">
+    </button>
+
+    <button onclick="changeLanguage('portuguese')">
+      <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português">
+    </button>
+  </div>
+</body>
+</html>
+	
