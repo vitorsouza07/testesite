@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Check Soccer</title>
   <style>
-    /* Estilos CSS aqui */
+    body {
+      background-image: url('caminho/para/imagem.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      display: inline;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      padding: 10px;
+      color: #333;
+    }
+
+    .menu ul li a.button {
+      background-color: #888;
+      color: #fff;
+      padding: 15px 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu ul li a.button:hover {
+      transform: scale(1.2);
+    }
+
+    .menu ul li a.video-link {
+      background-color: transparent;
+      color: #333;
+    }
+
+    .menu ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
   </style>
-  <script>
-    /* Scripts JavaScript aqui */
-  </script>
 </head>
-<body class="background-image">
-  <h2>(Welcome to Check Soccer!)   (Bem vindo a Check Soccer!)</h2>
-  <h3>(Choose the language)  (Escolha o idioma)</h3>
-
-  <div class="language-buttons">
-    <button onclick="changeLanguage('english')">
-      <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English">
-    </button>
-
-    <button onclick="changeLanguage('portuguese')">
-      <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português">
-    </button>
-  </div>
-
+<body>
   <div class="menu">
     <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="jogadores.html">JOGADORES</a></li>
-      <li><a href="academy.html">ACADEMY</a></li>
-      <li><a href="sobre_nos.html">SOBRE NÓS</a></li>
-      <li><a href="contato.html">CONTATO</a></li>
+      <li><a href="#">Quem Somos</a></li>
+      <li><a href="#">Atletas</a></li>
+      <li><a href="#">Contatos</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#" class="video-link">Vídeo Atletas</a></li>
     </ul>
   </div>
 </body>
