@@ -4,19 +4,76 @@
   <meta charset="UTF-8">
   <title>Check Soccer</title>
   <style>
-    /* Estilos CSS aqui */
+    @font-face {
+      font-family: 'Basni';
+      src: url('path/to/basni.std.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Basni", serif;
+      text-align: center;
+      color: rgb(63, 61, 66);
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .language-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .language-buttons button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .language-buttons img {
+      width: 50px;
+      height: 30px;
+    }
+
+    .background-image {
+      background-image: url("https://img.freepik.com/fotos-gratis/variedade-de-diferentes-elementos-de-viagem_23-2148884929.jpg?w=740&t=st=1684177605~exp=1684178205~hmac=994fbd5a4469a00cafb60f4cf1a52eaa01329290b5418e2e1b99d8f6d6f80008");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .language-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .language-icons img {
+      width: 50px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
   </style>
   <script>
     window.onload = function() {
-      var video = document.getElementById('myVideo');
       var lang = localStorage.getItem('language');
 
       if (lang === 'english') {
-        video.style.display = 'none';
         window.location.href = 'http://checksoccer.se/EN/';
       } else if (lang === 'portuguese') {
-        video.style.display = 'none';
-        // window.location.href = 'nossa_equipe.html'; <-- Remova esta linha
+        window.location.href = 'http://checksoccer.com.br';
       }
     }
 
@@ -26,35 +83,19 @@
       if (lang === 'english') {
         window.location.href = 'http://checksoccer.se/EN/';
       } else if (lang === 'portuguese') {
-        // window.location.href = 'nossa_equipe.html'; <-- Remova esta linha
+        window.location.href = 'http://checksoccer.com.br/menu.html';
       }
     }
   </script>
 </head>
+
 <body class="background-image">
   <h2>(Welcome to Check Soccer!)   (Bem vindo a Check Soccer!)</h2>
   <h3>(Choose the language)  (Escolha o idioma)</h3>
 
-  <div class="language-buttons">
-    <button onclick="changeLanguage('english')">
-      <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English">
-    </button>
-
-    <button onclick="changeLanguage('portuguese')">
-      <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português">
-    </button>
-  </div>
-
-  <div id="menu" style="display: none;">
-    <div class="menu">
-      <ul>
-        <li><a href="menu.html">MENU</a></li>
-        <li><a href="jogadores.html">JOGADORES</a></li>
-        <li><a href="academy.html">ACADEMY</a></li>
-        <li><a href="nossa_equipe.html">SOBRE NÓS</a></li> <!-- Adicione este link -->
-        <li><a href="contato.html">CONTATO</a></li>
-      </ul>
-    </div>
+  <div class="language-icons">
+    <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English" onclick="changeLanguage('english')">
+    <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português" onclick="changeLanguage('portuguese')">
   </div>
 </body>
 </html>
