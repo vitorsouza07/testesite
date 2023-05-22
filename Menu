@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('caminho/para/imagem.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      display: inline;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      padding: 10px;
+      color: #333;
+    }
+
+    .menu ul li a.button {
+      background-color: #888;
+      color: #fff;
+      padding: 15px 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu ul li a.button:hover {
+      transform: scale(1.2);
+    }
+
+    .menu ul li a.video-link {
+      background-color: transparent;
+      color: #333;
+    }
+
+    .menu ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href="#">Quem Somos</a></li>
+      <li><a href="#">Atletas</a></li>
+      <li><a href="#">Contatos</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#" class="video-link">Vídeo Atletas</a></li>
+    </ul>
+  </div>
+</body>
+</html>
