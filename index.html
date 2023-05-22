@@ -67,23 +67,13 @@
     }
   </style>
   <script>
-    window.onload = function() {
-      var lang = localStorage.getItem('language');
-
-      if (lang === 'english') {
-        window.location.href = 'https://check-soccer.netlify.app/Menu';
-      } else if (lang === 'portuguese') {
-        window.location.href = 'https://check-soccer.netlify.app/Menu';
-      }
-    }
-
     function changeLanguage(lang) {
       localStorage.setItem('language', lang);
 
       if (lang === 'english') {
-        window.location.href = 'https://check-soccer.netlify.app/Menu';
+        window.location.href = 'https://check-soccer.netlify.app/Menu.html';
       } else if (lang === 'portuguese') {
-        window.location.href = 'https://check-soccer.netlify.app/Menu';
+        window.location.href = 'https://check-soccer.netlify.app/Menu.html';
       }
     }
   </script>
@@ -93,9 +83,13 @@
   <h2>(Welcome to Check Soccer!)   (Bem vindo a Check Soccer!)</h2>
   <h3>(Choose the language)  (Escolha o idioma)</h3>
 
-  <div class="language-icons">
-    <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English" onclick="changeLanguage('english')">
-    <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português" id="brasil-flag" onclick="changeLanguage('portuguese')">
+  <div class="language-buttons">
+    <button onclick="changeLanguage('english')">
+      <img src="https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png" alt="English">
+    </button>
+    <button onclick="changeLanguage('portuguese')">
+      <img src="https://cdn.pixabay.com/photo/2020/02/26/02/30/brazil-4880477_1280.png" alt="Português">
+    </button>
   </div>
 </body>
 </html>
