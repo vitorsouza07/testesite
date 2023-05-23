@@ -19,9 +19,47 @@
       max-width: 100%;
       max-height: 100%;
     }
+    
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .menu li {
+      display: inline-block;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
+  <div class="menu">
+    <ul>
+      <li><a href='Menu.html'><span>HOME</span></a></li>
+      <li><a href='players.html'><span>Jogadores</span></a></li>
+      <li><a href='academy.html'><span>Academy</span></a></li>
+      <li><a href='nossa_equipe.html'><span>Sobre Nós</span></a></li>
+      <li><a href='contact.html'><span>Contato</span></a></li>
+      <li><a href='news.html'><span>news</span></a></li>
+    </ul>
+  </div>
+
   <div class="image-container">
     <img src="nosso time.pdf" alt="Campo">
   </div>
@@ -29,4 +67,3 @@
   <!-- Inclua aqui o conteúdo da seção "Nosso Time" -->
 </body>
 </html>
-
