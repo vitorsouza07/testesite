@@ -4,8 +4,11 @@
   <title>Nossa Equipe</title>
   <style>
     body {
+      background-color: #f2f2f2;
       background-image: url('vestiario.png');
       background-size: cover;
+      margin: 0;
+      padding: 0;
     }
 
     .image-container {
@@ -25,7 +28,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #f2f2f2;
+      background-color: #474545;
       padding: 10px;
     }
 
@@ -43,15 +46,45 @@
 
     .menu li a {
       text-decoration: none;
-      color: #333;
+      color: #fffefe;
       padding: 10px;
+    }
+
+    .title-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .animated-title {
+      color: white;
+      animation: moveAndChangeColor 5s infinite alternate;
+      margin-left: 100px;
+    }
+
+    @keyframes moveAndChangeColor {
+      0% {
+        transform: translateX(0);
+        color: white;
+      }
+      50% {
+        transform: translateX(100px);
+        color: #3d3d3d;
+      }
+      100% {
+        transform: translateX(0);
+        color: rgb(136, 90, 90);
+      }
     }
   </style>
 </head>
 <body>
   <div class="menu">
     <ul>
-      <li><a href='Menu.html'><span>HOME</span></a></li>
+      <li><a href='Menu.html'><span>Home</span></a></li>
       <li><a href='players.html'><span>Jogadores</span></a></li>
       <li><a href='academy.html'><span>Academy</span></a></li>
       <li><a href='nossa_equipe.html'><span>Sobre Nós</span></a></li>
@@ -60,10 +93,14 @@
     </ul>
   </div>
 
-  <div class="image-container">
-    <img src="nosso time.pdf" alt="Campo">
+  <div class="title-container">
+    <h1 class="animated-title">Nosso Time</h1>
   </div>
-  <h1>Nosso Time</h1>
+
+  <div class="image-container">
+    <img src="caminho/para/a/imagem.png" alt="Imagem">
+  </div>
+  
   <!-- Inclua aqui o conteúdo da seção "Nosso Time" -->
 </body>
 </html>
