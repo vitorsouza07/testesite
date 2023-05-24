@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   body {
+      background-image: url('https://img.freepik.com/fotos-gratis/variedade-de-diferentes-elementos-de-viagem_23-2148884929.jpg?w=740&t=st=1684177605~exp=1684178205~hmac=994fbd5a4469a00cafb60f4cf1a52eaa01329290b5418e2e1b99d8f6d6f80008');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 20;
+      padding: 20;
+    }
+
+    .menu {
+      background-color: #6e6b6b;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      display: inline;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .menu ul li a.button {
+      background-color: #c2c2c2;
+      color: #fff;
+      padding: 20px 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .menu ul li a.button:hover {
+      transform: scale(1.3);
+    }
+
+    .menu ul li a.video-link {
+      background-color: transparent;
+      color: #ffffff;
+    }
+
+    .menu ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Define a altura da tela inteira */
+    }
+
+    .carousel {
+      /* Correção: fechamento da tag <style> */
+    }
+
+    .moldura {
+      width: 10%;
+      border: 5px solid rgb(236, 236, 236) #d3caca8c;
+      padding: 5px;
+    }
+
+    /* Adicione o estilo para ocultar o vídeo */
+    .hidden-video {
+      display: none;
+    }
+
+    /* Estilo para centralizar o vídeo */
+    .video-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: auto;
+      z-index: 999;
+    }
+
+    /* Estilo para o botão de fechar o vídeo */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: #ffffff;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    /* Estilo para o botão flutuante do WhatsApp */
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 70%;
+      background-color: #14b85500;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      z-index: 9999;
+      animation: shake 0.8s infinite;
+    }
+
+    .floating-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0px;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px) rotate(-5deg); }
+      50% { transform: translateX(5px) rotate(5deg); }
+      75% { transform: translateX(-5px) rotate(-5deg); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+  <!-- Adicione os links para os estilos do Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href='Menu.html'><span>Home</span></a></li>
+      <li><a href='players.html'><span>Jogadores</span></a>
+      <li><a href='academy.html'><span>Academy</span></a>
+      <li><a href='nossa_equipe.html'><span>Sobre Nós</span></a></li>
+      <li><a href='contact.html'><span>Contato</span></a></li>
+      <li><a href='news.html'><span>news</span></a></li>
+    </ul>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+         
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="claudinho.png" alt="Imagem 1">
+          </div>
+          <div class="carousel-item">
+            <img src="lucas.png" alt="Imagem 2">
+          </div>
+          <div class="carousel-item">
+            <img src="paraguaio.png" alt="Imagem 3">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adicione o vídeo oculto -->
+  <div class="video-container video">
+    <video id="video" loop>
+      <source src="CHECK.mp4" type="video/mp4">
+    </video>
+    <span class="close-button" onclick="closeVideo()">&times;</span>
+  </div>
+
+  <script>
+    // Função para exibir o vídeo
+    function playVideo() {
+      var videoContainer = document.querySelector('.video-container');
+      videoContainer.classList.remove('hidden-video');
+      var video = document.getElementById('video');
+      video.play();
+    }
+
+    // Função para fechar o vídeo
+    function closeVideo() {
+      var videoContainer = document.querySelector('.video-container');
+      videoContainer.classList.add('hidden-video');
+      var video = document.getElementById('video');
+      video.pause();
+    }
+  </script>
+
+  <!-- Adicione o botão flutuante do WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5511948709260" class="floating-button" target="_blank">
+    <img src="https://static.vecteezy.com/system/resources/previews/018/819/295/non_2x/whatsapp-icon-transparent-free-png.png" alt="WhatsApp">
+  </a>
+</body>
+</html>
