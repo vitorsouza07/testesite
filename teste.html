@@ -77,54 +77,21 @@
 
     /* Estilo para centralizar o vídeo */
     .video-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50%;
-      height: auto;
-      z-index: 999;
-    }
-
-    /* Estilo para o botão de fechar o vídeo */
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      color: #ffffff;
-      cursor: pointer;
-      z-index: 100;
-    }
-
-    /* Estilo para o botão flutuante do WhatsApp */
-    .floating-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 70%;
-      background-color: #14b85500;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      z-index: 9999;
-      animation: shake 0.8s infinite;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .floating-button img {
+    .video {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      padding: 0px;
-    }
-
-    @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-5px) rotate(-5deg); }
-      50% { transform: translateX(5px) rotate(5deg); }
-      75% { transform: translateX(-5px) rotate(-5deg); }
-      100% { transform: translateX(0); }
     }
   </style>
   <!-- Adicione os links para os estilos do Bootstrap -->
@@ -180,8 +147,8 @@
   </div>
 
   <!-- Adicione o vídeo oculto -->
-  <div class="video-container video">
-    <video id="video" loop>
+  <div class="video-container hidden-video">
+    <video autoplay loop muted class="video">
       <source src="CHECK.mp4" type="video/mp4">
     </video>
     <span class="close-button" onclick="closeVideo()">&times;</span>
@@ -192,7 +159,7 @@
     function playVideo() {
       var videoContainer = document.querySelector('.video-container');
       videoContainer.classList.remove('hidden-video');
-      var video = document.getElementById('video');
+      var video = document.querySelector('.video');
       video.play();
     }
 
@@ -200,8 +167,9 @@
     function closeVideo() {
       var videoContainer = document.querySelector('.video-container');
       videoContainer.classList.add('hidden-video');
-      var video = document.getElementById('video');
+      var video = document.querySelector('.video');
       video.pause();
+      video.currentTime = 0;
     }
   </script>
 
