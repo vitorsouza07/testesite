@@ -54,10 +54,10 @@
     }
 
     .carousel-container {
-      display: flash;
+      display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 500px;
+      height: 100vh; /* Define a altura da tela inteira */
     }
 
     .carousel {
@@ -66,8 +66,21 @@
 
     .moldura {
       width: 10%;
-      border: 5px solid black #d3caca8c;
+      border: 5px solid rgb(236, 236, 236) #d3caca8c;
       padding: 5px;
+    }
+
+    /* Adicione o estilo para ocultar o vídeo */
+    .hidden-video {
+      display: none;
+    }
+
+    /* Estilo para centralizar o vídeo */
+    .video {
+      position: CENTER;
+      top: 10%;
+      left: 10%;
+      transform: translate(10%, -80%);
     }
   </style>
   <!-- Adicione os links para os estilos do Bootstrap -->
@@ -83,7 +96,7 @@
       <li><a href='nossa_equipe.html'><span>Sobre Nós</span></a></li>
       <li><a href='contact.html'><span>Contato</span></a></li>
       <li><a href='news.html'><span>news</span></a></li>
-          </ul>
+    </ul>
   </div>
 
   <div class="carousel-container">
@@ -121,8 +134,14 @@
       </div>
     </div>
   </div>
-   </body>
+
+  <!-- Adicione o vídeo oculto -->
+  <video autoplay loop muted class="video">
+    <source src="CHECK.mp4" type="video/mp4">
+  </video>
+</body>
 </html>
+
 <!DOCTYPE html>
 <html>
 <head>
